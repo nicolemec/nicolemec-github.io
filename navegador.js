@@ -164,7 +164,7 @@ class Pantalla {
 
 }
 class MensajeFlotante {
-    constructor(texto, duracion = 100) {
+    constructor(texto, duracion = 200) {
         this.texto = texto;
         this.duracion = duracion;
         this.tiempoActual = 0;
@@ -216,4 +216,5 @@ class MensajeFlotante {
         pop();
     }
 }
+
 
