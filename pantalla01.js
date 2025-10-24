@@ -126,8 +126,8 @@ class Pantalla01 extends Pantalla {
             // Brillo por superposición
             blendMode(ADD);
 
-            const discoAncho = width * 0.65;
-            const discoAlto = height * 0.25;
+            const discoAncho = width * 0.45;
+            const discoAlto = height * 0.15;
 
             let ondas = 25; // cantidad de ondas visibles al mismo tiempo
             let espacio = 15; // distancia entre cada una
@@ -267,3 +267,4 @@ class Pantalla01 extends Pantalla {
         this.playSong(this.currentSong);
     }
 }
+
