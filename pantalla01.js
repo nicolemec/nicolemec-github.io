@@ -129,8 +129,8 @@ class Pantalla01 extends Pantalla {
             const discoAncho = width * 0.45;
             const discoAlto = height * 0.15;
 
-            let ondas = 25; // cantidad de ondas visibles al mismo tiempo
-            let espacio = 15; // distancia entre cada una
+            let ondas = random(10, 25); // cantidad de ondas visibles al mismo tiempo
+            let espacio = random (15,20); // distancia entre cada una
 
             for (let i = 0; i < ondas; i++) {
                 let factor = (frameCount - i * espacio) % (ondas * espacio);
@@ -141,7 +141,7 @@ class Pantalla01 extends Pantalla {
 
                 // Color dinámico según volumen y tiempo
                 let hue = (frameCount + i * 20 + this.volumenActual * 1000) % 360;
-                let alpha = map(scale, 0.1, 1.5, 100, 0);
+                let alpha = map(scale, 0.1, 1.5, 50, 0);
 
                 strokeWeight(10);
                 colorMode(HSL, 360, 100, 100, 100);
@@ -267,4 +267,5 @@ class Pantalla01 extends Pantalla {
         this.playSong(this.currentSong);
     }
 }
+
 
